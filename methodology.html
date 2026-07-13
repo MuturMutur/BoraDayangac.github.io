@@ -138,24 +138,34 @@
 
   /* bar charts */
   .bar-chart{width:100%}
-  .bar-row{display:flex;align-items:center;margin-bottom:6px}
+  .bar-row{display:flex;align-items:center;margin-bottom:6px;height:32px}
   .bar-label{
     font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;color:var(--ink);
-    min-width:280px;text-align:right;padding-right:14px;flex-shrink:0;line-height:1.3;
+    width:300px;text-align:right;padding-right:14px;flex-shrink:0;line-height:1.3;
   }
-  .bar-track{flex:1;height:28px;background:#f0ebe3;border-radius:4px;overflow:hidden;position:relative}
+  .bar-track{flex:1;height:28px;background:#f0ebe3;border-radius:4px;position:relative}
+  .bar-track--clip{overflow:hidden}
   .bar-fill{
-    height:100%;border-radius:4px;display:flex;align-items:center;padding-left:10px;
+    height:100%;border-radius:4px;display:flex;align-items:center;
     font-family:'Helvetica Neue',Arial,sans-serif;font-size:.74rem;font-weight:600;color:#fff;
     transition:width 1s cubic-bezier(.25,.46,.45,.94);width:0;
   }
+  /* labels inside bars (for coverage chart) */
+  .bar-fill.label-inside{padding-left:10px}
+  /* labels outside bars (for frequency chart) */
+  .bar-fill.label-outside{overflow:visible;position:relative}
+  .bar-fill.label-outside .bar-count{
+    position:absolute;right:-44px;top:50%;transform:translateY(-50%);
+    color:var(--ink);font-size:.78rem;font-weight:700;white-space:nowrap;
+  }
   .bar-val{
     font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;color:var(--ink-soft);
-    min-width:70px;padding-left:10px;flex-shrink:0;
+    width:60px;text-align:right;flex-shrink:0;
   }
 
-  /* dimension donuts */
-  .donut-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:2rem 0}
+  /* dimension donuts — pyramid: 3 top, 1 centered below */
+  .donut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem 0;justify-items:center}
+  .donut-card:nth-child(4){grid-column:2}
   .donut-card{text-align:center;padding:1.2rem;background:var(--paper);border:1px solid var(--line);border-radius:12px}
   .donut-card svg{width:160px;height:160px;margin:0 auto}
   .donut-card .dc-title{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem;font-weight:700;color:var(--bocconi);margin-top:.6rem}
@@ -213,8 +223,10 @@
 
   @media(max-width:700px){
     body{font-size:16px}
-    .bar-label{min-width:120px;font-size:.7rem}
+    .bar-label{width:140px;font-size:.68rem}
+    .bar-fill.label-outside .bar-count{right:-38px;font-size:.72rem}
     .donut-grid{grid-template-columns:1fr 1fr}
+    .donut-card:nth-child(4){grid-column:1 / -1;max-width:220px;justify-self:center}
     .xtab{font-size:.7rem}
     .xtab th,.xtab td{padding:5px 4px}
     .funnel-label{min-width:70px;font-size:.68rem}
@@ -701,11 +713,13 @@
     {label:'SO 11 · Standardization & Quality Governance', val:47, pct:'3.2%', color:'#d9a441'}
   ];
   var maxFreq = 223;
+  var maxBarPct = 70; // cap bar width at 70% to leave room for outside label
   var fc = document.getElementById('freqChart');
   if(fc){
     freqData.forEach(function(d){
       var row = document.createElement('div'); row.className='bar-row';
-      row.innerHTML = '<div class="bar-label">'+d.label+'</div><div class="bar-track"><div class="bar-fill" data-width="'+(d.val/maxFreq*100)+'%" style="background:'+d.color+'">'+d.val+'</div></div><div class="bar-val">'+d.pct+'</div>';
+      var barW = (d.val/maxFreq*maxBarPct);
+      row.innerHTML = '<div class="bar-label">'+d.label+'</div><div class="bar-track"><div class="bar-fill label-outside" data-width="'+barW+'%" style="background:'+d.color+'"><span class="bar-count">'+d.val+'</span></div></div><div class="bar-val">'+d.pct+'</div>';
       fc.appendChild(row);
     });
   }
@@ -729,7 +743,7 @@
   if(cc){
     covData.forEach(function(d){
       var row = document.createElement('div'); row.className='bar-row';
-      row.innerHTML = '<div class="bar-label">'+d.label+'</div><div class="bar-track"><div class="bar-fill" data-width="'+(d.val/11*100)+'%" style="background:'+d.color+'">'+d.val+'/11</div></div><div class="bar-val">'+d.pct+'</div>';
+      row.innerHTML = '<div class="bar-label">'+d.label+'</div><div class="bar-track bar-track--clip"><div class="bar-fill label-inside" data-width="'+(d.val/11*100)+'%" style="background:'+d.color+'">'+d.val+'/11</div></div><div class="bar-val">'+d.pct+'</div>';
       cc.appendChild(row);
     });
   }
