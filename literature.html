@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Literature Review — The Hazel Tree | Turkish Hazelnut Cluster</title>
+<title>Literature Review | The Hazel Tree | Turkish Hazelnut Cluster</title>
 <style>
   :root{
     --ink:#2b2118;
@@ -22,355 +22,731 @@
     --soil-light:#3a2c1e;
     --root:#8a6a4a;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--cream);color:var(--ink);
-    font-family:'Georgia','Times New Roman',serif;
-    font-size:18px;line-height:1.72;
-  }
-  h1,h2,h3,h4{font-family:'Georgia',serif;line-height:1.25;color:var(--hazel-dark)}
-  .sans{font-family:'Helvetica Neue',Arial,sans-serif}
 
-  /* ================= SITE SIDEBAR (shared across pages) ================= */
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Georgia','Times New Roman',serif;
+    font-size:18px;
+    line-height:1.72;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Georgia',serif;
+    line-height:1.25;
+    color:var(--hazel-dark);
+  }
+
+  .sans{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+  }
+
+  /* ================= SITE SIDEBAR ================= */
   #site-sidebar{
-    position:fixed;top:0;left:0;bottom:0;width:240px;z-index:60;
-    background:var(--paper);border-right:1px solid var(--line);
-    padding:2rem 1.4rem;overflow-y:auto;
-    transform:translateX(-100%);transition:transform .3s ease;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    width:240px;
+    z-index:60;
+    background:var(--paper);
+    border-right:1px solid var(--line);
+    padding:2rem 1.4rem;
+    overflow-y:auto;
+    transform:translateX(-100%);
+    transition:transform .3s ease;
   }
+
   #site-sidebar .brand{
-    font-family:'Georgia',serif;font-weight:700;font-size:1.02rem;color:var(--hazel-dark);
-    line-height:1.3;display:block;margin-bottom:.3rem;text-decoration:none;border:none;
+    font-family:'Georgia',serif;
+    font-weight:700;
+    font-size:1.02rem;
+    color:var(--hazel-dark);
+    line-height:1.3;
+    display:block;
+    margin-bottom:.3rem;
+    text-decoration:none;
+    border:none;
   }
-  #site-sidebar .brand .nut{font-size:1.3rem;display:block;margin-bottom:.4rem}
+
+  #site-sidebar .brand .nut{
+    font-size:1.3rem;
+    display:block;
+    margin-bottom:.4rem;
+  }
+
   #site-sidebar .tagline{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.68rem;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--shell);margin-bottom:2rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.68rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--shell);
+    margin-bottom:2rem;
   }
+
   #site-sidebar .navgroup{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.66rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--ink-soft);margin:1.6rem 0 .5rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.66rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:1.6rem 0 .5rem;
   }
-  #site-sidebar a.navlink, #site-sidebar span.navlink{
-    display:block;padding:.45rem .6rem;margin:0 -.6rem;border-radius:8px;
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;
-    color:var(--ink);text-decoration:none;border-bottom:none;
+
+  #site-sidebar a.navlink,
+  #site-sidebar span.navlink{
+    display:block;
+    padding:.45rem .6rem;
+    margin:0 -.6rem;
+    border-radius:8px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.85rem;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:none;
   }
-  #site-sidebar a.navlink:hover{background:var(--cream);color:var(--hazel)}
-  #site-sidebar a.navlink.active{background:var(--cream);color:var(--hazel);font-weight:700;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding-left:.75rem}
-  #site-sidebar span.navlink.soon{color:var(--ink-soft);opacity:.55;cursor:default}
-  #site-sidebar span.navlink.soon small{display:block;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--shell)}
+
+  #site-sidebar a.navlink:hover{
+    background:var(--cream);
+    color:var(--hazel);
+  }
+
+  #site-sidebar a.navlink.active{
+    background:var(--cream);
+    color:var(--hazel);
+    font-weight:700;
+    border-left:3px solid var(--gold);
+    border-radius:0 8px 8px 0;
+    padding-left:.75rem;
+  }
+
+  #site-sidebar span.navlink.soon{
+    color:var(--ink-soft);
+    opacity:.55;
+    cursor:default;
+  }
+
+  #site-sidebar span.navlink.soon small{
+    display:block;
+    font-size:.64rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--shell);
+  }
+
   #site-sidebar a.sublink{
-    display:block;padding:.28rem .6rem .28rem 1.2rem;margin:0 -.6rem;
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;color:var(--ink-soft);
-    text-decoration:none;border-bottom:none;border-left:2px solid var(--line);margin-left:.2rem;
+    display:block;
+    padding:.28rem .6rem .28rem 1.2rem;
+    margin:0 -.6rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    text-decoration:none;
+    border-bottom:none;
+    border-left:2px solid var(--line);
+    margin-left:.2rem;
   }
-  #site-sidebar a.sublink:hover{color:var(--hazel);border-left-color:var(--gold)}
+
+  #site-sidebar a.sublink:hover{
+    color:var(--hazel);
+    border-left-color:var(--gold);
+  }
+
   #sidebar-toggle{
-    position:fixed;top:16px;left:16px;z-index:70;
-    background:var(--paper);border:1px solid var(--line);border-radius:10px;
-    width:44px;height:44px;cursor:pointer;box-shadow:0 4px 14px rgba(75,48,24,.15);
-    font-size:1.15rem;color:var(--hazel);
+    position:fixed;
+    top:16px;
+    left:16px;
+    z-index:70;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:10px;
+    width:44px;
+    height:44px;
+    cursor:pointer;
+    box-shadow:0 4px 14px rgba(75,48,24,.15);
+    font-size:1.15rem;
+    color:var(--hazel);
   }
-  #sidebar-scrim{position:fixed;inset:0;background:rgba(43,33,24,.35);z-index:55;opacity:0;pointer-events:none;transition:opacity .3s}
-  body.sidebar-open #site-sidebar{transform:translateX(0)}
-  body.sidebar-open #sidebar-scrim{opacity:1;pointer-events:auto}
+
+  #sidebar-scrim{
+    position:fixed;
+    inset:0;
+    background:rgba(43,33,24,.35);
+    z-index:55;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .3s;
+  }
+
+  body.sidebar-open #site-sidebar{
+    transform:translateX(0);
+  }
+
+  body.sidebar-open #sidebar-scrim{
+    opacity:1;
+    pointer-events:auto;
+  }
+
   @media(min-width:1080px){
-    #site-sidebar{transform:translateX(0)}
-    #sidebar-toggle,#sidebar-scrim{display:none}
-    body{margin-left:240px}
+    #site-sidebar{
+      transform:translateX(0);
+    }
+
+    #sidebar-toggle,
+    #sidebar-scrim{
+      display:none;
+    }
+
+    body{
+      margin-left:240px;
+    }
   }
 
   /* ================= HERO ================= */
   header.hero{
-    min-height:52vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-    text-align:center;padding:9vh 24px 4vh;
+    min-height:52vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:9vh 24px 4vh;
     background:
       radial-gradient(ellipse 80% 50% at 50% -8%, #e5eedd 0%, transparent 60%),
       linear-gradient(180deg,#f3ede1 0%, var(--cream) 75%);
   }
+
   .hero .kicker{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--leaf);font-weight:700;margin-bottom:1rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.78rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--leaf);
+    font-weight:700;
+    margin-bottom:1rem;
   }
-  .hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);max-width:820px}
-  .hero h1 .accent{color:var(--leaf);font-style:italic}
-  .hero .sub{max-width:640px;margin:1.4rem auto 0;font-size:1.05rem;color:var(--ink-soft)}
+
+  .hero h1{
+    font-size:clamp(1.9rem,4.6vw,3.1rem);
+    max-width:820px;
+  }
+
+  .hero h1 .accent{
+    color:var(--leaf);
+    font-style:italic;
+  }
+
+  .hero .sub{
+    max-width:640px;
+    margin:1.4rem auto 0;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+
   .hero .hint{
-    margin-top:2.2rem;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--hazel);
-    border:1px dashed var(--shell);border-radius:999px;padding:.5rem 1.1rem;
+    margin-top:2.2rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--hazel);
+    border:1px dashed var(--shell);
+    border-radius:999px;
+    padding:.5rem 1.1rem;
   }
 
   /* ================= TREE ================= */
-  .tree-wrap{max-width:1000px;margin:1rem auto 0;padding:0 12px}
-  .tree-wrap svg{width:100%;height:auto;display:block}
-  .tree-legend{
-    display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;letter-spacing:.05em;
-    color:var(--ink-soft);margin:0 auto 1rem;max-width:760px;padding:0 24px;text-transform:uppercase;
+  .tree-wrap{
+    max-width:1000px;
+    margin:1rem auto 0;
+    padding:0 12px;
   }
-  .tree-legend .li{display:flex;align-items:center;gap:.45rem}
-  .tree-legend .dot{width:14px;height:14px;border-radius:50%;background:var(--shell);border:2px solid var(--hazel)}
-  .tree-legend .stemline{width:22px;height:4px;border-radius:2px;background:var(--hazel)}
-  .tree-legend .rootline{width:22px;height:4px;border-radius:2px;background:var(--root)}
 
-  /* SVG interactivity */
-  .stem-hit{cursor:pointer}
-  .stem-path{fill:none;stroke:var(--hazel);stroke-linecap:round;transition:stroke .25s, stroke-width .25s}
-  .stem-hit:hover .stem-path,.stem-hit:focus .stem-path{stroke:var(--gold)}
-  .stem-label{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;fill:var(--hazel-dark);cursor:pointer}
-  .stem-hit:hover .stem-label{fill:var(--gold)}
-  .nut{cursor:pointer}
-  .nut circle.shellc{fill:var(--shell);stroke:var(--hazel);stroke-width:2.5;transition:all .2s}
-  .nut:hover circle.shellc,.nut:focus circle.shellc{fill:var(--gold);stroke:var(--hazel-dark);r:15}
-  .nut text{font-family:'Helvetica Neue',Arial,sans-serif;font-size:9.5px;font-weight:700;fill:var(--hazel-dark);text-anchor:middle;pointer-events:none}
-  .leafshape{fill:var(--leaf-light);opacity:.85}
-  .leafshape.d{fill:var(--leaf)}
+  .tree-wrap svg{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .tree-legend{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1.2rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.75rem;
+    letter-spacing:.05em;
+    color:var(--ink-soft);
+    margin:0 auto 1rem;
+    max-width:760px;
+    padding:0 24px;
+    text-transform:uppercase;
+  }
+
+  .tree-legend .li{
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+  }
+
+  .tree-legend .dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:var(--shell);
+    border:2px solid var(--hazel);
+  }
+
+  .tree-legend .stemline{
+    width:22px;
+    height:4px;
+    border-radius:2px;
+    background:var(--hazel);
+  }
+
+  .tree-legend .rootline{
+    width:22px;
+    height:4px;
+    border-radius:2px;
+    background:var(--root);
+  }
+
+  .stem-hit{
+    cursor:pointer;
+  }
+
+  .stem-path{
+    fill:none;
+    stroke:var(--hazel);
+    stroke-linecap:round;
+    transition:stroke .25s, stroke-width .25s;
+  }
+
+  .stem-hit:hover .stem-path,
+  .stem-hit:focus .stem-path{
+    stroke:var(--gold);
+  }
+
+  .stem-label{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    fill:var(--hazel-dark);
+    cursor:pointer;
+  }
+
+  .stem-hit:hover .stem-label{
+    fill:var(--gold);
+  }
+
+  .nut{
+    cursor:pointer;
+  }
+
+  .nut circle.shellc{
+    fill:var(--shell);
+    stroke:var(--hazel);
+    stroke-width:2.5;
+    transition:all .2s;
+  }
+
+  .nut:hover circle.shellc,
+  .nut:focus circle.shellc{
+    fill:var(--gold);
+    stroke:var(--hazel-dark);
+    r:15;
+  }
+
+  .nut text{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:9.5px;
+    font-weight:700;
+    fill:var(--hazel-dark);
+    text-anchor:middle;
+    pointer-events:none;
+  }
+
+  .leafshape{
+    fill:var(--leaf-light);
+    opacity:.85;
+  }
+
+  .leafshape.d{
+    fill:var(--leaf);
+  }
+
   #tree-tooltip{
-    position:fixed;z-index:80;pointer-events:none;opacity:0;transition:opacity .15s;
-    background:var(--ink);color:var(--cream);font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:.78rem;padding:.45rem .8rem;border-radius:8px;max-width:260px;line-height:1.4;
+    position:fixed;
+    z-index:80;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .15s;
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.78rem;
+    padding:.45rem .8rem;
+    border-radius:8px;
+    max-width:260px;
+    line-height:1.4;
   }
 
   /* ================= PROSE / SECTION CARDS ================= */
-  .prose{max-width:720px;margin:0 auto;padding:0 24px}
-  .prose p{margin:0 0 1.4em}
-  em.term{font-style:italic;color:var(--hazel)}
-
-  .themeblock{padding:4.5rem 0 1rem}
-  .themehead{max-width:720px;margin:0 auto 2rem;padding:0 24px}
-  .themehead .code{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.74rem;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--leaf);font-weight:700;
+  .prose{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 24px;
   }
-  .themehead h2{font-size:1.9rem;margin:.3rem 0 .8rem}
-  .themehead .intro{color:var(--ink-soft)}
+
+  .prose p{
+    margin:0 0 1.4em;
+  }
+
+  em.term{
+    font-style:italic;
+    color:var(--hazel);
+  }
+
+  .themeblock{
+    padding:4.5rem 0 1rem;
+    scroll-margin-top:70px;
+  }
+
+  .themehead{
+    max-width:720px;
+    margin:0 auto 2rem;
+    padding:0 24px;
+  }
+
+  .themehead .code{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--leaf);
+    font-weight:700;
+  }
+
+  .themehead h2{
+    font-size:1.9rem;
+    margin:.3rem 0 .8rem;
+  }
+
+  .themehead .intro{
+    color:var(--ink-soft);
+  }
 
   .lit-card{
-    max-width:720px;margin:0 auto 1.6rem;padding:1.6rem 1.9rem;
-    background:var(--paper);border:1px solid var(--line);border-radius:14px;
-    box-shadow:0 8px 24px rgba(75,48,24,.06);scroll-margin-top:90px;
+    max-width:720px;
+    margin:0 auto 1.6rem;
+    padding:1.6rem 1.9rem;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    box-shadow:0 8px 24px rgba(75,48,24,.06);
+    scroll-margin-top:90px;
   }
-  .lit-card .cardtop{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.7rem;flex-wrap:wrap}
+
+  .lit-card .cardtop{
+    display:flex;
+    align-items:baseline;
+    gap:.8rem;
+    margin-bottom:.7rem;
+    flex-wrap:wrap;
+  }
+
   .lit-card .num{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:.72rem;
-    color:var(--paper);background:var(--hazel);border-radius:999px;padding:.25rem .7rem;letter-spacing:.08em;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:.72rem;
+    color:var(--paper);
+    background:var(--hazel);
+    border-radius:999px;
+    padding:.25rem .7rem;
+    letter-spacing:.08em;
   }
-  .lit-card h3{font-size:1.28rem;margin:0}
-  .lit-card p{margin:0 0 1em;font-size:.98rem}
-  .lit-card p:last-child{margin-bottom:0}
+
+  .lit-card h3{
+    font-size:1.28rem;
+    margin:0;
+  }
+
+  .lit-card p{
+    margin:0 0 1em;
+    font-size:.98rem;
+  }
+
+  .lit-card p:last-child{
+    margin-bottom:0;
+  }
+
   .lit-card .authors{
-    font-family:'Helvetica Neue',Arial,sans-serif;font-size:.72rem;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--shell);margin-bottom:.9rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--shell);
+    margin-bottom:.9rem;
   }
+
   .lit-card .limitation{
-    border-left:4px solid var(--rupture);background:#fdf3f0;border-radius:0 10px 10px 0;
-    padding:.8rem 1.1rem;margin:1.1rem 0;font-size:.94rem;
+    border-left:4px solid var(--rupture);
+    background:#fdf3f0;
+    border-radius:0 10px 10px 0;
+    padding:.8rem 1.1rem;
+    margin:1.1rem 0;
+    font-size:.94rem;
   }
+
   .lit-card .limitation .tag{
-    display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.68rem;font-weight:700;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--rupture);margin-bottom:.3rem;
+    display:block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--rupture);
+    margin-bottom:.3rem;
   }
+
   .lit-card .takeaway{
-    border-left:4px solid var(--gold);background:#fbf6ea;border-radius:0 10px 10px 0;
-    padding:.8rem 1.1rem;font-size:.94rem;
+    border-left:4px solid var(--gold);
+    background:#fbf6ea;
+    border-radius:0 10px 10px 0;
+    padding:.8rem 1.1rem;
+    font-size:.94rem;
   }
+
   .lit-card .takeaway .tag{
-    display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.68rem;font-weight:700;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;
+    display:block;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:.3rem;
   }
+
   .backtotree{
-    display:inline-block;margin:0 24px 0;font-family:'Helvetica Neue',Arial,sans-serif;
-    font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);
-    text-decoration:none;border-bottom:1px dashed var(--leaf);
+    display:inline-block;
+    margin:0 24px 0;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.75rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--leaf);
+    text-decoration:none;
+    border-bottom:1px dashed var(--leaf);
   }
-  .themeblock .backwrap{max-width:720px;margin:1.4rem auto 0;padding:0 24px}
-  .themeblock{scroll-margin-top:70px}
+
+  .themeblock .backwrap{
+    max-width:720px;
+    margin:1.4rem auto 0;
+    padding:0 24px;
+  }
 
   /* ================= UNDERGROUND / ROOTS ================= */
-.ground-transition{
-  height:130px;
-  margin-top:5rem;
-  background:linear-gradient(180deg,var(--cream) 0%,#d8c9ab 45%,var(--soil-light) 82%,var(--soil) 100%);
-  position:relative;
-}
-
-.ground-transition .grassline{
-  position:absolute;
-  top:48%;
-  left:0;
-  right:0;
-  transform:translateY(-50%);
-  text-align:center;
-
-  font-family:'Helvetica Neue',Arial,sans-serif;
-  font-size:1.45rem;
-  font-weight:800;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-
-  color:#f7efe2;
-  opacity:1;
-
-  -webkit-text-stroke:1px #3a2c1e;
-  text-shadow:
-    0 2px 0 #3a2c1e,
-    0 -2px 0 #3a2c1e,
-    2px 0 0 #3a2c1e,
-    -2px 0 0 #3a2c1e,
-    0 4px 12px rgba(0,0,0,.45);
-
-  white-space:nowrap;
-}
-
-section.underground{
-  background:var(--soil);
-  color:#e9ddcb;
-  padding:3.5rem 0 5rem;
-  position:relative;
-  overflow:hidden;
-}
-
-.underground h2{
-  color:#f0e6d4;
-  font-size:1.9rem;
-}
-
-.underground .themehead .code{
-  color:var(--gold);
-}
-
-.underground .themehead .intro{
-  color:#c9b89f;
-}
-
-.roots-svg-wrap{
-  max-width:860px;
-  margin:0 auto;
-  padding:0 12px;
-}
-
-.roots-svg-wrap svg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.rootpath{
-  fill:none;
-  stroke:var(--root);
-  stroke-linecap:round;
-}
-
-.root-card{
-  max-width:720px;
-  margin:0 auto 1.6rem;
-  padding:1.7rem 1.9rem;
-  border-radius:14px;
-  background:var(--soil-light);
-  border:1px solid #52402c;
-  scroll-margin-top:90px;
-}
-
-.root-card .tag{
-  font-family:'Helvetica Neue',Arial,sans-serif;
-  font-size:.7rem;
-  font-weight:700;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--gold);
-  display:block;
-  margin-bottom:.5rem;
-}
-
-.root-card h3{
-  color:#f0e6d4;
-  font-size:1.25rem;
-  margin-bottom:.7rem;
-}
-
-.root-card p{
-  font-size:.97rem;
-  margin:0 0 1em;
-  color:#dccfb8;
-}
-
-.root-card p:last-child{
-  margin-bottom:0;
-}
-
-.taproot{
-  max-width:720px;
-  margin:3rem auto 0;
-  padding:2rem 1.9rem;
-  text-align:center;
-  border:2px dashed #6b5638;
-  border-radius:14px;
-  color:#a8967c;
-}
-
-.taproot .tag{
-  font-family:'Helvetica Neue',Arial,sans-serif;
-  font-size:.7rem;
-  font-weight:700;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--shell);
-  display:block;
-  margin-bottom:.5rem;
-}
-
-footer{
-  background:var(--ink);
-  color:#b9a88f;
-  padding:2.6rem 24px;
-  text-align:center;
-  font-size:.9rem;
-  border-top:1px solid #3a2c1e;
-}
-
-footer a{
-  color:var(--gold);
-  text-decoration:none;
-}
-
-.foot-nav{
-  margin-top:1rem;
-  font-family:'Helvetica Neue',Arial,sans-serif;
-  font-size:.82rem;
-}
-
-.foot-nav a{
-  margin:0 .8rem;
-}
-
-@media(max-width:720px){
-  body{
-    font-size:16.5px;
-  }
-
-  .lit-card{
-    padding:1.2rem 1.3rem;
-  }
-
-  .hero .hint{
-    font-size:.68rem;
+  .ground-transition{
+    height:190px;
+    margin-top:5rem;
+    background:linear-gradient(180deg,var(--cream) 0%,#d8c9ab 38%,var(--soil-light) 74%,var(--soil) 100%);
+    position:relative;
+    overflow:hidden;
   }
 
   .ground-transition .grassline{
-    font-size:1rem;
-    letter-spacing:.18em;
+    position:absolute !important;
+    top:50% !important;
+    left:0 !important;
+    right:0 !important;
+    transform:translateY(-50%) !important;
+    text-align:center !important;
+
+    font-family:'Helvetica Neue',Arial,sans-serif !important;
+    font-size:clamp(2.2rem,5vw,4.2rem) !important;
+    font-weight:900 !important;
+    letter-spacing:.16em !important;
+    text-transform:uppercase !important;
+
+    color:#fff4df !important;
+    opacity:1 !important;
+
+    -webkit-text-stroke:2px #241b12 !important;
+    paint-order:stroke fill !important;
+
+    text-shadow:
+      0 3px 0 #241b12,
+      0 -3px 0 #241b12,
+      3px 0 0 #241b12,
+      -3px 0 0 #241b12,
+      0 8px 20px rgba(0,0,0,.75) !important;
+
+    z-index:20 !important;
+    white-space:nowrap !important;
+    line-height:1 !important;
   }
-}
+
+  section.underground{
+    background:var(--soil);
+    color:#e9ddcb;
+    padding:3.5rem 0 5rem;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .underground h2{
+    color:#f0e6d4;
+    font-size:1.9rem;
+  }
+
+  .underground .themehead .code{
+    color:var(--gold);
+  }
+
+  .underground .themehead .intro{
+    color:#c9b89f;
+  }
+
+  .roots-svg-wrap{
+    max-width:860px;
+    margin:0 auto;
+    padding:0 12px;
+  }
+
+  .roots-svg-wrap svg{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .rootpath{
+    fill:none;
+    stroke:var(--root);
+    stroke-linecap:round;
+  }
+
+  .root-card{
+    max-width:720px;
+    margin:0 auto 1.6rem;
+    padding:1.7rem 1.9rem;
+    border-radius:14px;
+    background:var(--soil-light);
+    border:1px solid #52402c;
+    scroll-margin-top:90px;
+  }
+
+  .root-card .tag{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:.5rem;
+  }
+
+  .root-card h3{
+    color:#f0e6d4;
+    font-size:1.25rem;
+    margin-bottom:.7rem;
+  }
+
+  .root-card p{
+    font-size:.97rem;
+    margin:0 0 1em;
+    color:#dccfb8;
+  }
+
+  .root-card p:last-child{
+    margin-bottom:0;
+  }
+
+  .taproot{
+    max-width:720px;
+    margin:3rem auto 0;
+    padding:2rem 1.9rem;
+    text-align:center;
+    border:2px dashed #6b5638;
+    border-radius:14px;
+    color:#a8967c;
+  }
+
+  .taproot .tag{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--shell);
+    display:block;
+    margin-bottom:.5rem;
+  }
+
+  footer{
+    background:var(--ink);
+    color:#b9a88f;
+    padding:2.6rem 24px;
+    text-align:center;
+    font-size:.9rem;
+    border-top:1px solid #3a2c1e;
+  }
+
+  footer a{
+    color:var(--gold);
+    text-decoration:none;
+  }
+
+  .foot-nav{
+    margin-top:1rem;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:.82rem;
+  }
+
+  .foot-nav a{
+    margin:0 .8rem;
+  }
+
+  @media(max-width:720px){
+    body{
+      font-size:16.5px;
+    }
+
+    .lit-card{
+      padding:1.2rem 1.3rem;
+    }
+
+    .hero .hint{
+      font-size:.68rem;
+    }
+
+    .ground-transition{
+      height:140px;
+    }
+
+    .ground-transition .grassline{
+      font-size:clamp(1.35rem,8vw,2.2rem) !important;
+      letter-spacing:.08em !important;
+      -webkit-text-stroke:1.4px #241b12 !important;
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- ================= SIDEBAR ================= -->
 <button id="sidebar-toggle" aria-label="Open menu">☰</button>
 <div id="sidebar-scrim"></div>
+
 <nav id="site-sidebar" aria-label="Site navigation">
   <a class="brand" href="main.html"><span class="nut">🌰</span>The Merchants of the Turkish Hazelnut Cluster</a>
   <div class="tagline">MSc Thesis · T. B. Dayangaç</div>
@@ -390,12 +766,11 @@ footer a{
   <a class="sublink" href="#sec-roots">↓ The Roots: Research Gaps</a>
 </nav>
 
-<!-- ================= HERO ================= -->
 <header class="hero">
   <div class="kicker">Literature Review</div>
-  <h1>Four literatures, one root system: <span class="accent">reading the field like a hazel tree</span></h1>
+  <h1>Literatures Analysed: <span class="accent">Branches of the Hazelnut Tree</span></h1>
   <p class="sub">
-    Hazel does not grow a single trunk. It grows as a cluster of stems from a shared base —
+    Hazel does not grow a single trunk. It grows as a cluster of stems from a shared base,
     exactly how this review is built. Four bodies of literature rise separately,
     but they draw on the same underlying question: who carries knowledge through a market
     when the state withdraws?
@@ -403,154 +778,151 @@ footer a{
   <div class="hint">🌰 Click a stem or a nut to jump to that body of literature</div>
 </header>
 
-<!-- ================= THE TREE ================= -->
 <div id="the-tree" style="scroll-margin-top:70px">
-<div class="tree-legend">
-  <div class="li"><span class="stemline"></span> Stem = body of literature</div>
-  <div class="li"><span class="dot"></span> Nut = strand within it</div>
-  <div class="li"><span class="rootline"></span> Roots = research gaps (below ground)</div>
+  <div class="tree-legend">
+    <div class="li"><span class="stemline"></span> Stem = body of literature</div>
+    <div class="li"><span class="dot"></span> Nut = strand within it</div>
+    <div class="li"><span class="rootline"></span> Roots = research gaps below ground</div>
+  </div>
+
+  <div class="tree-wrap">
+    <svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive hazel tree diagram of the literature review">
+      <style>
+        .svg-label-panel{
+          fill:#faf6ef;
+          opacity:.94;
+          rx:10;
+        }
+
+        .stem-label,
+        .stem-number,
+        .nut text,
+        .research-question text{
+          paint-order:stroke;
+          stroke:#faf6ef;
+          stroke-width:5px;
+          stroke-linejoin:round;
+        }
+
+        .stem-label{
+          font-family:'Helvetica Neue',Arial,sans-serif;
+          font-weight:700;
+          fill:#4a2d18;
+        }
+
+        .stem-number{
+          font-family:'Helvetica Neue',Arial,sans-serif;
+          fill:#5a4a3a;
+        }
+
+        .research-question rect{
+          fill:#e7dcc4;
+          opacity:.96;
+          rx:10;
+        }
+      </style>
+
+      <path d="M0 565 Q 240 548 480 562 T 960 560 L 960 660 L 0 660 Z" fill="#e7dcc4"/>
+      <path d="M0 572 Q 240 556 480 569 T 960 568" fill="none" stroke="#c9b489" stroke-width="2"/>
+
+      <path class="rootpath" d="M470 572 C 450 600 430 615 400 635" stroke-width="5" stroke="#8a6a4a" fill="none" opacity=".45"/>
+      <path class="rootpath" d="M490 572 C 505 605 540 620 570 635" stroke-width="5" stroke="#8a6a4a" fill="none" opacity=".45"/>
+      <path class="rootpath" d="M480 572 C 480 600 478 625 480 650" stroke-width="6" stroke="#8a6a4a" fill="none" opacity=".55"/>
+
+      <g class="stem-hit" data-target="sec-31" tabindex="0" aria-label="3.1 Cluster Studies">
+        <path class="stem-path" stroke-width="13" d="M455 568 C 400 480 330 400 250 320 C 210 280 185 230 175 170"/>
+        <ellipse class="leafshape d" cx="150" cy="145" rx="26" ry="11" transform="rotate(-40 150 145)"/>
+        <ellipse class="leafshape" cx="220" cy="178" rx="24" ry="10" transform="rotate(25 220 178)"/>
+        <ellipse class="leafshape" cx="255" cy="275" rx="22" ry="9" transform="rotate(-55 255 275)"/>
+        <rect class="svg-label-panel" x="83" y="78" width="170" height="54"/>
+        <text class="stem-label" x="168" y="102" text-anchor="middle" font-size="15">Cluster Studies</text>
+        <text class="stem-number" x="168" y="122" text-anchor="middle" font-size="11">3.1</text>
+      </g>
+
+      <g class="nut" data-target="sec-311" tabindex="0" aria-label="3.1.1 Information in Cluster Theory" data-tip="3.1.1: Information in Cluster Theory, Marshall and Porter, and the symmetry bias">
+        <circle class="shellc" cx="352" cy="440" r="13"/><text x="352" y="470">3.1.1</text>
+      </g>
+
+      <g class="nut" data-target="sec-312" tabindex="0" aria-label="3.1.2 Relational Critiques of Cluster Theory" data-tip="3.1.2: Relational Critiques, institutional thickness and the formalist bias">
+        <circle class="shellc" cx="290" cy="365" r="13"/><text x="290" y="395">3.1.2</text>
+      </g>
+
+      <g class="nut" data-target="sec-313" tabindex="0" aria-label="3.1.3 Latecomer Clusters and Global Integration" data-tip="3.1.3: Latecomer Clusters, GVC integration and informal power">
+        <circle class="shellc" cx="228" cy="290" r="13"/><text x="228" y="320">3.1.3</text>
+      </g>
+
+      <g class="nut" data-target="sec-314" tabindex="0" aria-label="3.1.4 Agricultural Clusters" data-tip="3.1.4: Agricultural Clusters, input-output linkages and ungoverned relations">
+        <circle class="shellc" cx="190" cy="215" r="13"/><text x="190" y="245">3.1.4</text>
+      </g>
+
+      <g class="stem-hit" data-target="sec-32" tabindex="0" aria-label="3.2 Economic Sociology of Proximity and Embeddedness">
+        <path class="stem-path" stroke-width="12" d="M468 568 C 440 470 415 370 390 260 C 382 220 378 170 380 125"/>
+        <ellipse class="leafshape" cx="355" cy="150" rx="24" ry="10" transform="rotate(-35 355 150)"/>
+        <ellipse class="leafshape d" cx="405" cy="200" rx="22" ry="9" transform="rotate(40 405 200)"/>
+        <rect class="svg-label-panel" x="290" y="38" width="185" height="72"/>
+        <text class="stem-label" x="382" y="65" text-anchor="middle" font-size="15">Proximity &amp;</text>
+        <text class="stem-label" x="382" y="83" text-anchor="middle" font-size="15">Embeddedness</text>
+        <text class="stem-number" x="382" y="102" text-anchor="middle" font-size="11">3.2</text>
+      </g>
+
+      <g class="nut" data-target="sec-321" tabindex="0" aria-label="3.2.1 French School of Proximity Dynamics" data-tip="3.2.1: French School of Proximity Dynamics, Torre, Gilly and Boschma">
+        <circle class="shellc" cx="418" cy="350" r="13"/><text x="418" y="380">3.2.1</text>
+      </g>
+
+      <g class="nut" data-target="sec-322" tabindex="0" aria-label="3.2.2 Social Embeddedness" data-tip="3.2.2: Social Embeddedness, Polanyi, Granovetter and Ramirez et al.">
+        <circle class="shellc" cx="398" cy="235" r="13"/><text x="398" y="265">3.2.2</text>
+      </g>
+
+      <g class="stem-hit" data-target="sec-33" tabindex="0" aria-label="3.3 Economic Transition and Agriculture in Turkey">
+        <path class="stem-path" stroke-width="12" d="M492 568 C 520 480 550 390 575 300 C 588 255 595 200 595 150"/>
+        <ellipse class="leafshape d" cx="625" cy="175" rx="24" ry="10" transform="rotate(35 625 175)"/>
+        <ellipse class="leafshape" cx="560" cy="220" rx="22" ry="9" transform="rotate(-40 560 220)"/>
+        <rect class="svg-label-panel" x="498" y="58" width="205" height="74"/>
+        <text class="stem-label" x="600" y="86" text-anchor="middle" font-size="15">Economic Transition</text>
+        <text class="stem-label" x="600" y="104" text-anchor="middle" font-size="15">&amp; Agriculture in Turkey</text>
+        <text class="stem-number" x="600" y="124" text-anchor="middle" font-size="11">3.3</text>
+      </g>
+
+      <g class="nut" data-target="sec-33" tabindex="0" aria-label="3.3 The post-1980 rupture" data-tip="3.3: The post-1980 rupture, Aydın, Keyder and Yenal, Şafak-Çubukçu">
+        <circle class="shellc" cx="562" cy="340" r="13"/><text x="562" y="370">3.3</text>
+      </g>
+
+      <g class="stem-hit" data-target="sec-34" tabindex="0" aria-label="3.4 Turkish Hazelnut Studies">
+        <path class="stem-path" stroke-width="13" d="M505 568 C 570 490 650 420 720 350 C 760 310 782 250 788 188"/>
+        <ellipse class="leafshape" cx="820" cy="160" rx="26" ry="11" transform="rotate(40 820 160)"/>
+        <ellipse class="leafshape d" cx="742" cy="205" rx="24" ry="10" transform="rotate(-30 742 205)"/>
+        <ellipse class="leafshape" cx="700" cy="310" rx="22" ry="9" transform="rotate(50 700 310)"/>
+        <rect class="svg-label-panel" x="708" y="92" width="185" height="74"/>
+        <text class="stem-label" x="800" y="120" text-anchor="middle" font-size="15">Turkish Hazelnut</text>
+        <text class="stem-label" x="800" y="138" text-anchor="middle" font-size="15">Studies</text>
+        <text class="stem-number" x="800" y="158" text-anchor="middle" font-size="11">3.4</text>
+      </g>
+
+      <g class="nut" data-target="sec-341" tabindex="0" aria-label="3.4.1 Policy-Oriented and Regional Development Studies" data-tip="3.4.1: Policy and Regional Development, Şık, Cebecioğlu, Ay and Demirci">
+        <circle class="shellc" cx="640" cy="428" r="13"/><text x="640" y="458">3.4.1</text>
+      </g>
+
+      <g class="nut" data-target="sec-342" tabindex="0" aria-label="3.4.2 Labour and Cultural Approaches" data-tip="3.4.2: Labour and Culture, women's labour, child labour and hazelnut folklore">
+        <circle class="shellc" cx="716" cy="356" r="13"/><text x="716" y="386">3.4.2</text>
+      </g>
+
+      <g class="nut" data-target="sec-343" tabindex="0" aria-label="3.4.3 Economic Organization and Agricultural Transformation" data-tip="3.4.3: Economic Organization, land fragmentation, Fiskobirlik era and organic transition">
+        <circle class="shellc" cx="764" cy="272" r="13"/><text x="764" y="302">3.4.3</text>
+      </g>
+
+      <ellipse cx="480" cy="568" rx="52" ry="14" fill="#6b4226"/>
+
+      <g class="research-question">
+        <rect x="300" y="595" width="360" height="46"/>
+        <text x="480" y="615" text-anchor="middle" font-size="11.5" fill="#5a4a3a" font-family="Helvetica Neue,Arial,sans-serif" letter-spacing="2">ONE RESEARCH QUESTION</text>
+        <text x="480" y="633" text-anchor="middle" font-size="10" fill="#8a7a66" font-family="Georgia,serif" font-style="italic">How did the role of merchants as intermediaries evolve after the 1980s?</text>
+      </g>
+    </svg>
+  </div>
 </div>
-<div class="tree-wrap">
-<svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive hazel tree diagram of the literature review">
 
-  <style>
-    .svg-label-panel{
-      fill:#faf6ef;
-      opacity:.94;
-      rx:10;
-    }
-    .stem-label,
-    .stem-number,
-    .nut text,
-    .research-question text{
-      paint-order:stroke;
-      stroke:#faf6ef;
-      stroke-width:5px;
-      stroke-linejoin:round;
-    }
-    .stem-label{
-      font-family:'Helvetica Neue',Arial,sans-serif;
-      font-weight:700;
-      fill:#4a2d18;
-    }
-    .stem-number{
-      font-family:'Helvetica Neue',Arial,sans-serif;
-      fill:#5a4a3a;
-    }
-    .research-question rect{
-      fill:#e7dcc4;
-      opacity:.96;
-      rx:10;
-    }
-  </style>
-
-  <!-- ground -->
-  <path d="M0 565 Q 240 548 480 562 T 960 560 L 960 660 L 0 660 Z" fill="#e7dcc4"/>
-  <path d="M0 572 Q 240 556 480 569 T 960 568" fill="none" stroke="#c9b489" stroke-width="2"/>
-
-  <!-- root hints going down -->
-  <path class="rootpath" d="M470 572 C 450 600 430 615 400 635" stroke-width="5" stroke="#8a6a4a" fill="none" opacity=".45"/>
-  <path class="rootpath" d="M490 572 C 505 605 540 620 570 635" stroke-width="5" stroke="#8a6a4a" fill="none" opacity=".45"/>
-  <path class="rootpath" d="M480 572 C 480 600 478 625 480 650" stroke-width="6" stroke="#8a6a4a" fill="none" opacity=".55"/>
-
-  <!-- ============ STEM 1 : CLUSTER STUDIES ============ -->
-  <g class="stem-hit" data-target="sec-31" tabindex="0" aria-label="3.1 Cluster Studies">
-    <path class="stem-path" stroke-width="13" d="M455 568 C 400 480 330 400 250 320 C 210 280 185 230 175 170"/>
-    <ellipse class="leafshape d" cx="150" cy="145" rx="26" ry="11" transform="rotate(-40 150 145)"/>
-    <ellipse class="leafshape" cx="220" cy="178" rx="24" ry="10" transform="rotate(25 220 178)"/>
-    <ellipse class="leafshape" cx="255" cy="275" rx="22" ry="9" transform="rotate(-55 255 275)"/>
-
-    <rect class="svg-label-panel" x="83" y="78" width="170" height="54"/>
-    <text class="stem-label" x="168" y="102" text-anchor="middle" font-size="15">Cluster Studies</text>
-    <text class="stem-number" x="168" y="122" text-anchor="middle" font-size="11">3.1</text>
-  </g>
-
-  <g class="nut" data-target="sec-311" tabindex="0" aria-label="3.1.1 Information in Cluster Theory" data-tip="3.1.1 — Information in Cluster Theory: Marshall &amp; Porter, and the symmetry bias">
-    <circle class="shellc" cx="352" cy="440" r="13"/><text x="352" y="470">3.1.1</text>
-  </g>
-  <g class="nut" data-target="sec-312" tabindex="0" aria-label="3.1.2 Relational Critiques of Cluster Theory" data-tip="3.1.2 — Relational Critiques: institutional thickness and the formalist bias">
-    <circle class="shellc" cx="290" cy="365" r="13"/><text x="290" y="395">3.1.2</text>
-  </g>
-  <g class="nut" data-target="sec-313" tabindex="0" aria-label="3.1.3 Latecomer Clusters and Global Integration" data-tip="3.1.3 — Latecomer Clusters: GVC integration and informal power">
-    <circle class="shellc" cx="228" cy="290" r="13"/><text x="228" y="320">3.1.3</text>
-  </g>
-  <g class="nut" data-target="sec-314" tabindex="0" aria-label="3.1.4 Agricultural Clusters" data-tip="3.1.4 — Agricultural Clusters: input–output linkages, ungoverned relations">
-    <circle class="shellc" cx="190" cy="215" r="13"/><text x="190" y="245">3.1.4</text>
-  </g>
-
-  <!-- ============ STEM 2 : PROXIMITY & EMBEDDEDNESS ============ -->
-  <g class="stem-hit" data-target="sec-32" tabindex="0" aria-label="3.2 Economic Sociology of Proximity and Embeddedness">
-    <path class="stem-path" stroke-width="12" d="M468 568 C 440 470 415 370 390 260 C 382 220 378 170 380 125"/>
-    <ellipse class="leafshape" cx="355" cy="150" rx="24" ry="10" transform="rotate(-35 355 150)"/>
-    <ellipse class="leafshape d" cx="405" cy="200" rx="22" ry="9" transform="rotate(40 405 200)"/>
-
-    <rect class="svg-label-panel" x="290" y="38" width="185" height="72"/>
-    <text class="stem-label" x="382" y="65" text-anchor="middle" font-size="15">Proximity &amp;</text>
-    <text class="stem-label" x="382" y="83" text-anchor="middle" font-size="15">Embeddedness</text>
-    <text class="stem-number" x="382" y="102" text-anchor="middle" font-size="11">3.2</text>
-  </g>
-
-  <g class="nut" data-target="sec-321" tabindex="0" aria-label="3.2.1 French School of Proximity Dynamics" data-tip="3.2.1 — French School of Proximity Dynamics: Torre, Gilly, Boschma">
-    <circle class="shellc" cx="418" cy="350" r="13"/><text x="418" y="380">3.2.1</text>
-  </g>
-  <g class="nut" data-target="sec-322" tabindex="0" aria-label="3.2.2 Social Embeddedness" data-tip="3.2.2 — Social Embeddedness: Polanyi, Granovetter, Ramirez et al.">
-    <circle class="shellc" cx="398" cy="235" r="13"/><text x="398" y="265">3.2.2</text>
-  </g>
-
-  <!-- ============ STEM 3 : ECONOMIC TRANSITION ============ -->
-  <g class="stem-hit" data-target="sec-33" tabindex="0" aria-label="3.3 Economic Transition and Agriculture in Turkey">
-    <path class="stem-path" stroke-width="12" d="M492 568 C 520 480 550 390 575 300 C 588 255 595 200 595 150"/>
-    <ellipse class="leafshape d" cx="625" cy="175" rx="24" ry="10" transform="rotate(35 625 175)"/>
-    <ellipse class="leafshape" cx="560" cy="220" rx="22" ry="9" transform="rotate(-40 560 220)"/>
-
-    <rect class="svg-label-panel" x="498" y="58" width="205" height="74"/>
-    <text class="stem-label" x="600" y="86" text-anchor="middle" font-size="15">Economic Transition</text>
-    <text class="stem-label" x="600" y="104" text-anchor="middle" font-size="15">&amp; Agriculture in Turkey</text>
-    <text class="stem-number" x="600" y="124" text-anchor="middle" font-size="11">3.3</text>
-  </g>
-
-  <g class="nut" data-target="sec-33" tabindex="0" aria-label="3.3 The post-1980 rupture" data-tip="3.3 — The post-1980 rupture: Aydın, Keyder &amp; Yenal, Şafak-Çubukçu">
-    <circle class="shellc" cx="562" cy="340" r="13"/><text x="562" y="370">3.3</text>
-  </g>
-
-  <!-- ============ STEM 4 : TURKISH HAZELNUT STUDIES ============ -->
-  <g class="stem-hit" data-target="sec-34" tabindex="0" aria-label="3.4 Turkish Hazelnut Studies">
-    <path class="stem-path" stroke-width="13" d="M505 568 C 570 490 650 420 720 350 C 760 310 782 250 788 188"/>
-    <ellipse class="leafshape" cx="820" cy="160" rx="26" ry="11" transform="rotate(40 820 160)"/>
-    <ellipse class="leafshape d" cx="742" cy="205" rx="24" ry="10" transform="rotate(-30 742 205)"/>
-    <ellipse class="leafshape" cx="700" cy="310" rx="22" ry="9" transform="rotate(50 700 310)"/>
-
-    <rect class="svg-label-panel" x="708" y="92" width="185" height="74"/>
-    <text class="stem-label" x="800" y="120" text-anchor="middle" font-size="15">Turkish Hazelnut</text>
-    <text class="stem-label" x="800" y="138" text-anchor="middle" font-size="15">Studies</text>
-    <text class="stem-number" x="800" y="158" text-anchor="middle" font-size="11">3.4</text>
-  </g>
-
-  <g class="nut" data-target="sec-341" tabindex="0" aria-label="3.4.1 Policy-Oriented and Regional Development Studies" data-tip="3.4.1 — Policy &amp; Regional Development: Şık, Cebecioğlu, Ay, Demirci">
-    <circle class="shellc" cx="640" cy="428" r="13"/><text x="640" y="458">3.4.1</text>
-  </g>
-  <g class="nut" data-target="sec-342" tabindex="0" aria-label="3.4.2 Labour and Cultural Approaches" data-tip="3.4.2 — Labour &amp; Culture: women's labour, child labour, hazelnut folklore">
-    <circle class="shellc" cx="716" cy="356" r="13"/><text x="716" y="386">3.4.2</text>
-  </g>
-  <g class="nut" data-target="sec-343" tabindex="0" aria-label="3.4.3 Economic Organization and Agricultural Transformation" data-tip="3.4.3 — Economic Organization: land fragmentation, Fiskobirlik era, organic transition">
-    <circle class="shellc" cx="764" cy="272" r="13"/><text x="764" y="302">3.4.3</text>
-  </g>
-
-  <!-- base clump -->
-  <ellipse cx="480" cy="568" rx="52" ry="14" fill="#6b4226"/>
-
-  <!-- research question label -->
-  <g class="research-question">
-    <rect x="300" y="595" width="360" height="46"/>
-    <text x="480" y="615" text-anchor="middle" font-size="11.5" fill="#5a4a3a" font-family="Helvetica Neue,Arial,sans-serif" letter-spacing="2">ONE RESEARCH QUESTION</text>
-    <text x="480" y="633" text-anchor="middle" font-size="10" fill="#8a7a66" font-family="Georgia,serif" font-style="italic">How did the role of merchants as intermediaries evolve after the 1980s?</text>
-  </g>
-</svg>
-</div>
-</div>
 <div id="tree-tooltip"></div>
 
-<!-- ================= 3.1 CLUSTER STUDIES ================= -->
 <section class="themeblock" id="sec-31">
   <div class="themehead">
     <span class="code">Stem 3.1</span>
@@ -568,20 +940,20 @@ footer a{
     <p>
       Within cluster theory, information is specialised, localised knowledge that flows more effectively
       between collocated firms, suppliers and institutions. Marshall and Porter both treat the
-      socialisation of information as the cluster's primary advantage — though for Marshall knowledge
+      socialisation of information as the cluster's primary advantage, though for Marshall knowledge
       circulates through the <em class="term">industrial atmosphere</em>, while Porter sees it as an
       institutionalised phenomenon.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — symmetry bias</span>
+      <span class="tag">Limitation: symmetry bias</span>
       Both models assume information flows freely once the atmosphere is established. In the Turkish
       hazelnut sector this overlooks power asymmetry: merchants can hoard information on export prices
-      and quality standards, turning a "shared asset" into a tool for market domination.
+      and quality standards, turning a shared asset into a tool for market domination.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
       When state-led knowledge hubs like Fiskobirlik withdrew after the 1980s, Porter's
-      "institutionalised knowledge" was privatised. Whether the merchants' gatekeeping role is a
+      institutionalised knowledge was privatised. Whether the merchants' gatekeeping role is a
       product of liberalisation is the gap this thesis fills.
     </div>
   </div>
@@ -593,14 +965,14 @@ footer a{
       Critics push cluster theory toward relational dynamics. MacKinnon et al. read clusters through
       uneven capitalist development; Jessop through the growing weight of social and institutional
       relations in the knowledge-based economy. Both converge on
-      <em class="term">institutional thickness</em> — the density of support structures within a cluster —
+      <em class="term">institutional thickness</em>, the density of support structures within a cluster,
       as a source of competitive advantage.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — formalist bias</span>
+      <span class="tag">Limitation: formalist bias</span>
       Supporting institutions are conceptualised as organised entities: state agencies, associations,
-      formal networks. This leaves little room for informal, relationally embedded actors — like
-      merchants — performing institutional functions where formal structures are weak.
+      formal networks. This leaves little room for informal, relationally embedded actors, like
+      merchants, performing institutional functions where formal structures are weak.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
@@ -614,20 +986,20 @@ footer a{
     <div class="authors">Jucevicius &amp; Grumadaite · Tekin Bülbül</div>
     <p>
       The latecomer literature explains how developing economies join global markets: structural
-      constraints — weak governance, low trust — are eased through global value chain (GVC) integration,
+      constraints, weak governance and low trust, are eased through global value chain integration,
       multinational anchor firms, or local institutional entrepreneurs. Evidence from the Turkish
       hazelnut sector fits, with local constraints overcome through informal networks coordinated by
       dominant exporters.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — the missing middle</span>
+      <span class="tag">Limitation: the missing middle</span>
       Attention goes to exporters, MNCs and institutional entrepreneurs. The intermediation
-      <em>below</em> the exporter level — how merchants shape information flows, bargaining relations
-      and market access inside the cluster — remains insufficiently specified.
+      <em>below</em> the exporter level, how merchants shape information flows, bargaining relations
+      and market access inside the cluster, remains insufficiently specified.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
-      The local mechanisms through which GVC integration is actually reproduced on the ground.
+      The local mechanisms through which global value chain integration is actually reproduced on the ground.
     </div>
   </div>
 
@@ -636,26 +1008,25 @@ footer a{
     <div class="authors">Dirven · Burger et al. · He et al. · Wardhana · Gálvez-Nogales</div>
     <p>
       Agricultural clusters are variously framed as crop-specific agglomerations, integrated value
-      chains, or input–output networks — "the entire range of input–output linkages in production and
-      transactions" (Dirven). Studies differ in emphasis (firm cooperation, upgrading, agglomeration
-      effects on farmer income) but converge on proximity as the defining feature.
+      chains, or input-output networks. Studies differ in emphasis, including firm cooperation,
+      upgrading and agglomeration effects on farmer income, but converge on proximity as the defining feature.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — structure without governance</span>
-      The literature prioritises structural dimensions — value-chain linkages, firm networks — while
+      <span class="tag">Limitation: structure without governance</span>
+      The literature prioritises structural dimensions, value-chain linkages and firm networks, while
       saying little about how these relationships are <em>governed</em>, and about the intermediaries
       who mediate them and construct market-based social boundaries.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
       The need for a framework capturing how market relationships are structured and strategically
-      mobilised — which is why the review turns to economic sociology next.
+      mobilised, which is why the review turns to economic sociology next.
     </div>
   </div>
+
   <div class="backwrap"><a class="backtotree" href="#the-tree">↑ back to the tree</a></div>
 </section>
 
-<!-- ================= 3.2 PROXIMITY & EMBEDDEDNESS ================= -->
 <section class="themeblock" id="sec-32">
   <div class="themehead">
     <span class="code">Stem 3.2</span>
@@ -663,9 +1034,7 @@ footer a{
     <p class="intro">
       Cluster theory explains why economic activity concentrates, but not how relations within clusters
       are structured and differentiated. This stem moves from the question of concentration to the
-      question of social organisation — from Martin &amp; Sunley's paradox of localisation in a global
-      economy, through Morgan's socially embedded knowledge, to the asymmetries hidden inside
-      "shared knowledge frames."
+      question of social organisation.
     </p>
   </div>
 
@@ -673,16 +1042,15 @@ footer a{
     <div class="cardtop"><span class="num">3.2.1</span><h3>French School of Proximity Dynamics</h3></div>
     <div class="authors">Torre &amp; Gilly · Boschma · Rallet &amp; Torre</div>
     <p>
-      Proximity is multi-dimensional: cognitive, organisational, social, institutional — with geography
+      Proximity is multi-dimensional: cognitive, organisational, social and institutional, with geography
       as the physical basis of interaction. Boschma integrates the framework, treating geographical
       proximity as a facilitating condition that lowers barriers across the other dimensions.
-      Contemporary scholarship agrees that co-location alone cannot explain innovation or knowledge
-      exchange.
+      Contemporary scholarship agrees that co-location alone cannot explain innovation or knowledge exchange.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — formalist bias, again</span>
+      <span class="tag">Limitation: formalist bias, again</span>
       By categorising proximity into formal dimensions that solve coordination problems, the literature
-      assumes proximity facilitates learning uniformly — overlooking how access to knowledge and
+      assumes proximity facilitates learning uniformly, overlooking how access to knowledge and
       coordination benefits may be unevenly distributed.
     </div>
     <div class="takeaway">
@@ -697,27 +1065,26 @@ footer a{
     <div class="authors">Polanyi · Granovetter · Ramirez, Clarke &amp; Klerkx · Uzzi</div>
     <p>
       Economic action is situated within networks of social relations: inseparable from social context
-      (Polanyi), embedded in ongoing networks (Granovetter). Recent work goes further — Ramirez et al.
-      show intermediaries leveraging network positions to bridge fragmented actors and coordinate
-      cluster development. Embeddedness shifts from a general condition of economic life to a
-      <em class="term">resource</em> mobilised by actors in advantageous positions.
+      and embedded in ongoing networks. Recent work goes further. Ramirez et al. show intermediaries
+      leveraging network positions to bridge fragmented actors and coordinate cluster development.
+      Embeddedness shifts from a general condition of economic life to a <em class="term">resource</em>
+      mobilised by actors in advantageous positions.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — spatial fetishism</span>
-      Treating clusters as cohesive units (MacKinnon et al.) obscures internal asymmetries in access to
-      information. Embeddedness is unevenly distributed — and can reinforce hierarchy within local
-      networks.
+      <span class="tag">Limitation: spatial fetishism</span>
+      Treating clusters as cohesive units obscures internal asymmetries in access to information.
+      Embeddedness is unevenly distributed and can reinforce hierarchy within local networks.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
-      How ties of trust, reputation and kinship shape patterns of access — and structure economic
-      activity — inside the cluster.
+      How ties of trust, reputation and kinship shape patterns of access and structure economic
+      activity inside the cluster.
     </div>
   </div>
+
   <div class="backwrap"><a class="backtotree" href="#the-tree">↑ back to the tree</a></div>
 </section>
 
-<!-- ================= 3.3 ECONOMIC TRANSITION ================= -->
 <section class="themeblock" id="sec-33">
   <div class="themehead">
     <span class="code">Stem 3.3</span>
@@ -730,34 +1097,31 @@ footer a{
     <p>
       All three accounts agree the post-1980 era is a fundamental rupture: the private market replaced
       state-led development as the formative power of the economy. Aydın reads the neoliberal shift as
-      abandonment of the nationalist project (1930–1980) in favour of transnational agribusiness;
-      Keyder &amp; Yenal show globalisation sweeping away state-maintained networks, leaving small
-      producers exposed to global price swings; Şafak-Çubukçu frames it as
-      <em class="term">primitive accumulation</em>, with the state governing through the market rather
-      than intervening directly.
+      abandonment of the nationalist project in favour of transnational agribusiness; Keyder and Yenal
+      show globalisation sweeping away state-maintained networks, leaving small producers exposed to
+      global price swings; Şafak-Çubukçu frames it as <em class="term">primitive accumulation</em>,
+      with the state governing through the market rather than intervening directly.
     </p>
     <p>
       They differ on agency and geography: Aydın stresses marginalisation of small-scale production,
-      while Keyder &amp; Yenal find differentiated regional outcomes — fertile coastal strips generated
-      new economic activity rather than uniform decline.
+      while Keyder and Yenal find differentiated regional outcomes.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — the absent merchant</span>
-      Focused on macro-structural transformation (policy reform, privatisation), this literature
-      documents the destruction of state institutions but rarely the micro-social level. By fixating on
-      the "absence of the state," it misses the active presence of the merchant as a new,
-      <em>private regulator</em> filling the void.
+      <span class="tag">Limitation: the absent merchant</span>
+      Focused on macro-structural transformation, this literature documents the destruction of state
+      institutions but rarely the micro-social level. By fixating on the absence of the state, it misses
+      the active presence of the merchant as a new private regulator filling the void.
     </div>
     <div class="takeaway">
       <span class="tag">What the thesis takes</span>
-      A shift of focus to the local and relational dynamics — everyday practices, network relations,
-      intermediary actors — through which governance was re-enacted after the state withdrew.
+      A shift of focus to the local and relational dynamics, everyday practices, network relations and
+      intermediary actors, through which governance was re-enacted after the state withdrew.
     </div>
   </div>
+
   <div class="backwrap"><a class="backtotree" href="#the-tree">↑ back to the tree</a></div>
 </section>
 
-<!-- ================= 3.4 TURKISH HAZELNUT STUDIES ================= -->
 <section class="themeblock" id="sec-34">
   <div class="themehead">
     <span class="code">Stem 3.4</span>
@@ -778,11 +1142,10 @@ footer a{
       harvest in Fatsa, Ordu.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — top-down &amp; thin samples</span>
+      <span class="tag">Limitation: top-down and thin samples</span>
       Emphasis falls on policy frameworks rather than relational dynamics. Methodologically, many
-      studies rely on small samples with restricted transparency (e.g. 8 farmers; undisclosed gender
-      composition; interviewing relatives) — constraining what they can say about how producers,
-      intermediaries, exporters and institutions actually interact.
+      studies rely on small samples with restricted transparency, constraining what they can say about
+      how producers, intermediaries, exporters and institutions actually interact.
     </div>
   </div>
 
@@ -790,13 +1153,12 @@ footer a{
     <div class="cardtop"><span class="num">3.4.2</span><h3>Labour &amp; Cultural Approaches</h3></div>
     <div class="authors">Baş &amp; Ciğerci-Ulukan · Karadeniz et al. · Derelioğlu-Kaan</div>
     <p>
-      A strand attentive to underrepresented groups: the invisibility of women's labour in the sector
-      (Baş &amp; Ciğerci-Ulukan); child labour in the Giresun harvest of 2019, with an average working
-      age of 15.9 and a minimum of 11 (Karadeniz et al.); and the intersection of hazelnut folklore and
-      economic practice (Derelioğlu-Kaan), which widens the field beyond policy and production.
+      A strand attentive to underrepresented groups: the invisibility of women's labour in the sector,
+      child labour in the Giresun harvest of 2019, and the intersection of hazelnut folklore and
+      economic practice, which widens the field beyond policy and production.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — the missing chain</span>
+      <span class="tag">Limitation: the missing chain</span>
       Labour conditions and cultural practices are examined in detail, but the mechanisms linking them
       to broader patterns of coordination and exchange in the local value chain remain underexplored.
     </div>
@@ -807,13 +1169,13 @@ footer a{
     <div class="authors">Başer &amp; Bozoğlu · Yurtoğlu · Meral &amp; Millan · Demiryürek &amp; Ceyhan</div>
     <p>
       Başer shows fragmented farms suffer lower profitability and higher emissions; Yurtoğlu uses
-      archival data on the early republic (1923–1950) to show how state interventions like Fiskobirlik
-      standardised production and built Turkey's global dominance; Meral &amp; Millan and
-      Demiryürek &amp; Ceyhan analyse the drivers and economics of the organic transition.
+      archival data on the early republic to show how state interventions like Fiskobirlik standardised
+      production and built Turkey's global dominance; Meral and Millan and Demiryürek and Ceyhan
+      analyse the drivers and economics of the organic transition.
     </p>
     <div class="limitation">
-      <span class="tag">Limitation — description over relation</span>
-      Substantial empirical insight into policy, labour, production and culture — but limited attention
+      <span class="tag">Limitation: description over relation</span>
+      Substantial empirical insight into policy, labour, production and culture, but limited attention
       to how coordination, information flows and market access are structured within the cluster.
     </div>
     <div class="takeaway">
@@ -822,11 +1184,13 @@ footer a{
       organisation of the hazelnut economy.
     </div>
   </div>
+
   <div class="backwrap"><a class="backtotree" href="#the-tree">↑ back to the tree</a></div>
 </section>
 
-<!-- ================= UNDERGROUND: THE ROOTS ================= -->
-<div class="ground-transition"><div class="grassline">▼ below the ground level ▼</div></div>
+<div class="ground-transition">
+  <div class="grassline">▼ below the ground level ▼</div>
+</div>
 
 <section class="underground" id="sec-roots">
   <div class="themehead">
@@ -834,7 +1198,7 @@ footer a{
     <h2>What the Literature Cannot Yet Explain</h2>
     <p class="intro">
       Every stem above draws from the same soil. Digging beneath the four literatures, the review
-      exposes two connected roots — the gaps this thesis grows from.
+      exposes two connected roots: the gaps this thesis grows from.
     </p>
   </div>
 
@@ -850,10 +1214,10 @@ footer a{
 
   <div class="root-card">
     <span class="tag">Root I · The Theoretical Gap</span>
-    <h3>Intermediaries in the cluster–GVC connection</h3>
+    <h3>Intermediaries in the cluster-GVC connection</h3>
     <p>
       Cluster studies, economic sociology, and work on latecomer integration explain knowledge,
-      proximity and global market connection — but do not sufficiently account for the role of
+      proximity and global market connection, but do not sufficiently account for the role of
       intermediaries in linking clusters to global value chains through embedded, local relations.
       The literature remains limited in explaining how intermediaries, such as the merchants of the
       Turkish hazelnut cluster, fill structural holes within clusters.
@@ -865,7 +1229,7 @@ footer a{
     <h3>The understudied 1980s transformation</h3>
     <p>
       The case-specific literature on the Turkish hazelnut sector offers descriptive and historical
-      material on policy, labour and production — but remains fragmented in its coverage of the
+      material on policy, labour and production, but remains fragmented in its coverage of the
       sector's historical development. The 1980s neoliberal transformation, in particular, is
       understudied, and its implications for the organisation of the sector insufficiently examined.
     </p>
@@ -876,27 +1240,15 @@ footer a{
     <h3>Addressing the first gap through the second</h3>
     <p>
       By focusing on intermediaries in the post-liberalisation hazelnut cluster, the thesis contributes
-      to debates on embeddedness and cluster–GVC connections while extending the empirical literature
+      to debates on embeddedness and cluster-GVC connections while extending the empirical literature
       beyond descriptive accounts. Hence the research question at the base of the tree:
       <em>How did the role of merchants as intermediaries evolve following the neoliberal restructuring
       of Turkey's economy in the 1980s?</em>
     </p>
   </div>
 
-  <!--
-    ============================================================
-    PLACEHOLDER — FINDINGS & CONTRIBUTIONS
-    ============================================================
-    When the findings page is designed, replace the .taproot div
-    below with a link that grows from these roots, e.g.:
-
-    <a class="taproot-link" href="findings.html">
-      See what grew from these gaps → Findings & Contributions
-    </a>
-    ============================================================
-  -->
   <div class="taproot">
-    <span class="tag">🌱 Taproot — under construction</span>
+    <span class="tag">🌱 Taproot · under construction</span>
     From these gaps, the thesis grows its findings and contributions.<br>
     A dedicated page will be connected here.
   </div>
@@ -913,26 +1265,46 @@ footer a{
 
 <script>
 (function(){
-  // ---- sidebar toggle ----
   var toggle=document.getElementById('sidebar-toggle');
   var scrim=document.getElementById('sidebar-scrim');
-  function close(){document.body.classList.remove('sidebar-open')}
-  toggle.addEventListener('click',function(){document.body.classList.toggle('sidebar-open')});
-  scrim.addEventListener('click',close);
-  document.querySelectorAll('#site-sidebar a').forEach(function(a){a.addEventListener('click',close)});
 
-  // ---- tree interactivity ----
+  function close(){
+    document.body.classList.remove('sidebar-open');
+  }
+
+  toggle.addEventListener('click',function(){
+    document.body.classList.toggle('sidebar-open');
+  });
+
+  scrim.addEventListener('click',close);
+
+  document.querySelectorAll('#site-sidebar a').forEach(function(a){
+    a.addEventListener('click',close);
+  });
+
   var tip=document.getElementById('tree-tooltip');
+
   function go(id){
     var el=document.getElementById(id);
-    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}
+    if(el){
+      el.scrollIntoView({behavior:'smooth',block:'start'});
+    }
   }
+
   document.querySelectorAll('.stem-hit,.nut').forEach(function(g){
-    g.addEventListener('click',function(){go(g.getAttribute('data-target'))});
-    g.addEventListener('keydown',function(e){
-      if(e.key==='Enter'||e.key===' '){e.preventDefault();go(g.getAttribute('data-target'));}
+    g.addEventListener('click',function(){
+      go(g.getAttribute('data-target'));
     });
+
+    g.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){
+        e.preventDefault();
+        go(g.getAttribute('data-target'));
+      }
+    });
+
     var tipText=g.getAttribute('data-tip')||g.getAttribute('aria-label');
+
     if(tipText){
       g.addEventListener('mousemove',function(e){
         tip.textContent=tipText.replace(/&amp;/g,'&');
@@ -940,7 +1312,10 @@ footer a{
         tip.style.left=Math.min(e.clientX+14,window.innerWidth-280)+'px';
         tip.style.top=(e.clientY+16)+'px';
       });
-      g.addEventListener('mouseleave',function(){tip.style.opacity=0});
+
+      g.addEventListener('mouseleave',function(){
+        tip.style.opacity=0;
+      });
     }
   });
 })();
